@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css">
+    <title>Excalibur Bunnymark</title>
+    <script>
+       (function () {
+            var script = document.createElement('script'); script.onload = function () {
+                var stats = new
+                    Stats(); document.body.appendChild(stats.dom); requestAnimationFrame(function
+                        loop() { stats.update(); requestAnimationFrame(loop) });
+            }; script.src = 'https://mrdoob.github.io/stats.js/build/stats.min.js'; document.head.appendChild(script);
+        })()
+    </script>
+  </head>
+  <body>
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>
