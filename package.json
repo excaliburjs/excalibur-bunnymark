@@ -24,7 +24,7 @@
   "devDependencies": {
     "excalibur": "0.30.0-alpha.990",
     "typescript": "5.4.2",
-    "vite": "5.1.5"
+    "vite": "5.2.7"
   },
   "dependencies": {
     "@excaliburjs/testing": "^0.25.0"
