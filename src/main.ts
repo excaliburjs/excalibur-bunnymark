@@ -27,6 +27,7 @@ class Game extends Engine {
   override onInitialize() {
     const params = new URLSearchParams(window.location.search);
     const totalBunnies = parseInt(params.get('count') ?? '100000') || 100000;
+    console.log('total bunnies', totalBunnies);
     for (let i = 0; i < totalBunnies; i++) {
       this.addBunny();
     }
@@ -40,8 +41,10 @@ class Game extends Engine {
 
   override onPostDraw(ctx: ExcaliburGraphicsContext) {
     for (let i = 0; i < this.bunnies.length; i++) {
-      ctx.drawImage(this.bunnies[i].view.image.image, this.bunnies[i].positionX, this.bunnies[i].positionY);
-      // this.bunnies[i].view.draw(ctx, this.bunnies[i].positionX, this.bunnies[i].positionY);
+      ctx.drawImage(
+        this.bunnies[i].view.image.image, 
+        this.bunnies[i].positionX,
+        this.bunnies[i].positionY);
     }
   }
 }
