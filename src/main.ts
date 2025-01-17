@@ -17,13 +17,14 @@ class Game extends Engine {
       canvasElementId: 'game',
       enableCanvasTransparency: false,
       useDrawSorting: false,
-      pixelRatio: 1
+      pixelRatio: 1,
+      suppressPlayButton: true
     });
     addBunnies.addEventListener('click', () => {
       this.addBunniesClick()
     });
     reset.addEventListener('click', () => {
-      window.location =  window.location.href.replace(window.location.search, '') as any;
+      window.location = window.location.href.replace(window.location.search, '') as any;
     })
   }
 
@@ -68,7 +69,7 @@ class Game extends Engine {
   override onPostDraw(ctx: ExcaliburGraphicsContext) {
     for (let i = 0; i < this.bunnies.length; i++) {
       ctx.drawImage(
-        this.bunnies[i].view.image.image, 
+        this.bunnies[i].view.image.image,
         this.bunnies[i].positionX,
         this.bunnies[i].positionY);
     }
