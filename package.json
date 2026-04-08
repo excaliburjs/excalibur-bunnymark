@@ -22,7 +22,7 @@
   "bugs": {},
   "homepage": "",
   "devDependencies": {
-    "cross-env": "7.0.3",
+    "cross-env": "10.1.0",
     "typescript": "5.9.3",
     "vite": "6.4.2"
   },
